@@ -95,7 +95,7 @@ export const FullScreenScrollFX = forwardRef<HTMLDivElement, FullScreenFXProps>(
 
       durations = { change: 0.7, snap: 800 },
       reduceMotion,
-      smoothScroll = false,
+      smoothScroll: _smoothScroll = false,
 
       bgTransition = "fade",
       parallaxAmount = 4,
@@ -153,7 +153,7 @@ export const FullScreenScrollFX = forwardRef<HTMLDivElement, FullScreenFXProps>(
       const words = text.split(/\s+/).filter(Boolean);
       return words.map((w, i) => (
         <span className="fx-word-mask" key={i}>
-          <span className="fx-word" ref={(el) => el && tempWordBucket.current.push(el)}>{w}</span>
+          <span className="fx-word" ref={(el) => { if (el) tempWordBucket.current.push(el); }}>{w}</span>
           {i < words.length - 1 ? " " : null}
         </span>
       ));
@@ -461,7 +461,7 @@ export const FullScreenScrollFX = forwardRef<HTMLDivElement, FullScreenFXProps>(
                     ) : (
                       <>
                         <img
-                          ref={(el) => el && (bgRefs.current[i] = el)}
+                          ref={(el) => { if (el) bgRefs.current[i] = el; }}
                           src={s.background}
                           alt=""
                           className="fx-bg-img"
@@ -483,7 +483,7 @@ export const FullScreenScrollFX = forwardRef<HTMLDivElement, FullScreenFXProps>(
                         <div
                           key={`L-${s.id ?? i}`}
                           className={`fx-item fx-left-item ${i === index ? "active" : ""}`}
-                          ref={(el) => el && (leftItemRefs.current[i] = el)}
+                          ref={(el) => { if (el) leftItemRefs.current[i] = el; }}
                           onClick={() => handleJump(i)}
                           role="button"
                           tabIndex={0}
@@ -523,7 +523,7 @@ export const FullScreenScrollFX = forwardRef<HTMLDivElement, FullScreenFXProps>(
                         <div
                           key={`R-${s.id ?? i}`}
                           className={`fx-item fx-right-item ${i === index ? "active" : ""}`}
-                          ref={(el) => el && (rightItemRefs.current[i] = el)}
+                          ref={(el) => { if (el) rightItemRefs.current[i] = el; }}
                           onClick={() => handleJump(i)}
                           role="button"
                           tabIndex={0}
