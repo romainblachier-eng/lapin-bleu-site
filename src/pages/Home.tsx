@@ -10,11 +10,25 @@ const sections = [
       "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=1920&q=80",
   },
   {
+    leftLabel: "Énergie · Taïwan",
+    title: "Domaines d'expertise",
+    rightLabel: "Indo-Pacifique",
+    background:
+      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&q=80",
+  },
+  {
     leftLabel: "Équipes",
     title: "Formation",
     rightLabel: "Transmission",
     background:
       "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&q=80",
+  },
+  {
+    leftLabel: "Sciences Po · EM Lyon · IEP Lyon",
+    title: "Enseigne & publie",
+    rightLabel: "Asia Times · Le Temps · Contrepoints",
+    background:
+      "https://images.unsplash.com/photo-1568667256549-094345857637?w=1920&q=80",
   },
   {
     leftLabel: "À partir de",
