@@ -2,18 +2,18 @@ import { FullScreenScrollFX } from "./components/ui/full-screen-scroll-fx";
 
 const sections = [
   {
-    leftLabel: "Géopolitique",
-    title: "Études, notes, formation, communication",
-    rightLabel: "Lapin Bleu",
+    leftLabel: "Lapin Bleu",
+    title: "Études & notes de géopolitique",
+    rightLabel: "Analyses",
     background:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80",
+      "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=1920&q=80",
   },
   {
     leftLabel: "Sur mesure",
     title: "Études géopolitiques",
-    rightLabel: "Analyse",
+    rightLabel: "Approfondies",
     background:
-      "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=1920&q=80",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80",
   },
   {
     leftLabel: "Synthèses",
@@ -37,7 +37,7 @@ const sections = [
       "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1920&q=80",
   },
   {
-    leftLabel: "Offre à part",
+    leftLabel: "Offre distincte",
     title: "SEO & GEO",
     rightLabel: "Visibilité IA",
     background:
