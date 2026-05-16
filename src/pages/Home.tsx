@@ -24,12 +24,18 @@ const sections = [
       "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&q=80",
   },
   {
-    leftLabel: "Sciences Po · IEP Lyon",
-    title: "Enseigne & publie",
-    rightLabel:
-      "Fondation Jean Jaurès · Telos · La Grande Conversation · Asia Times · Taipei Times",
+    leftLabel: "Sciences Po",
+    title: "Enseignement",
+    rightLabel: "IEP Lyon",
     background:
       "https://images.unsplash.com/photo-1568667256549-094345857637?w=1920&q=80",
+  },
+  {
+    leftLabel: "Fondation Jean Jaurès · Telos · La Grande Conversation",
+    title: "Publications",
+    rightLabel: "Asia Times · Taipei Times",
+    background:
+      "https://images.unsplash.com/photo-1495020689067-958852a7765e?w=1920&q=80",
   },
   {
     leftLabel: "À partir de",
