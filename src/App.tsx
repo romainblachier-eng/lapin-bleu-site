@@ -16,16 +16,30 @@ const sections = [
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80",
   },
   {
+    leftLabel: "Sur mesure",
+    title: "Études approfondies",
+    rightLabel: "Données",
+    background:
+      "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1920&q=80",
+  },
+  {
+    leftLabel: "Chaque mois",
+    title: "Rapports détaillés",
+    rightLabel: "Insights",
+    background:
+      "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=1920&q=80",
+  },
+  {
     leftLabel: "Stratégie",
-    title: "Référencement",
-    rightLabel: "Résultats",
+    title: "Référencement piloté",
+    rightLabel: "Résultats mesurés",
     background:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80",
   },
   {
     leftLabel: "À partir de",
     title: "400€ / mois",
-    rightLabel: "Audit gratuit",
+    rightLabel: "Étude offerte",
     background:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80",
   },
