@@ -2,18 +2,11 @@ import { FullScreenScrollFX } from "./components/ui/full-screen-scroll-fx";
 
 const sections = [
   {
-    leftLabel: "Optimisation",
-    title: "GEO & SEO",
-    rightLabel: "Visibilité",
+    leftLabel: "GEO",
+    title: "Études, notes, formation, communication",
+    rightLabel: "SEO",
     background:
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80",
-  },
-  {
-    leftLabel: "ChatGPT",
-    title: "Les IA parlent de vous",
-    rightLabel: "Claude",
-    background:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80",
   },
   {
     leftLabel: "Sur mesure",
@@ -23,18 +16,25 @@ const sections = [
       "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1920&q=80",
   },
   {
-    leftLabel: "Chaque mois",
-    title: "Rapports détaillés",
-    rightLabel: "Insights",
+    leftLabel: "Synthèses",
+    title: "Notes de veille",
+    rightLabel: "Décryptages",
     background:
       "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=1920&q=80",
   },
   {
-    leftLabel: "Stratégie",
-    title: "Référencement piloté",
-    rightLabel: "Résultats mesurés",
+    leftLabel: "Équipes",
+    title: "Formation GEO & SEO",
+    rightLabel: "Autonomie",
     background:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80",
+      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&q=80",
+  },
+  {
+    leftLabel: "ChatGPT",
+    title: "Communication & IA",
+    rightLabel: "Claude",
+    background:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80",
   },
   {
     leftLabel: "À partir de",
