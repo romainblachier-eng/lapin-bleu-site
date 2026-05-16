@@ -2,37 +2,44 @@ import { FullScreenScrollFX } from "./components/ui/full-screen-scroll-fx";
 
 const sections = [
   {
-    leftLabel: "GEO",
+    leftLabel: "Géopolitique",
     title: "Études, notes, formation, communication",
-    rightLabel: "SEO",
+    rightLabel: "Lapin Bleu",
     background:
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80",
   },
   {
     leftLabel: "Sur mesure",
-    title: "Études approfondies",
-    rightLabel: "Données",
+    title: "Études géopolitiques",
+    rightLabel: "Analyse",
     background:
-      "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1920&q=80",
+      "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=1920&q=80",
   },
   {
     leftLabel: "Synthèses",
-    title: "Notes de veille",
+    title: "Notes de géopolitique",
     rightLabel: "Décryptages",
     background:
-      "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=1920&q=80",
+      "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=1920&q=80",
   },
   {
     leftLabel: "Équipes",
-    title: "Formation GEO & SEO",
-    rightLabel: "Autonomie",
+    title: "Formation",
+    rightLabel: "Transmission",
     background:
       "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&q=80",
   },
   {
-    leftLabel: "ChatGPT",
-    title: "Communication & IA",
-    rightLabel: "Claude",
+    leftLabel: "Prise de parole",
+    title: "Communication",
+    rightLabel: "Influence",
+    background:
+      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1920&q=80",
+  },
+  {
+    leftLabel: "Offre à part",
+    title: "SEO & GEO",
+    rightLabel: "Visibilité IA",
     background:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80",
   },
