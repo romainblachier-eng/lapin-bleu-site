@@ -24,9 +24,10 @@ const sections = [
       "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&q=80",
   },
   {
-    leftLabel: "Sciences Po · EM Lyon · IEP Lyon",
+    leftLabel: "Sciences Po · IEP Lyon",
     title: "Enseigne & publie",
-    rightLabel: "Asia Times · Le Temps · Contrepoints",
+    rightLabel:
+      "Fondation Jean Jaurès · Telos · La Grande Conversation · Asia Times · Taipei Times",
     background:
       "https://images.unsplash.com/photo-1568667256549-094345857637?w=1920&q=80",
   },
