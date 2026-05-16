@@ -24,7 +24,7 @@ const sections = [
       "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&q=80",
   },
   {
-    leftLabel: "Sciences Po · IEP Lyon · ILERI · HEIP",
+    leftLabel: "Sciences Po · IEP Lyon · ILERI · HEIP · ECAM",
     title: "Enseignement",
     rightLabel: "Depuis 2010",
     background:
