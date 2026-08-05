@@ -1,6 +1,7 @@
 :root {
-  --lb-serif: "Fraunces", "Cormorant Garamond", "Playfair Display", Georgia, serif;
-  --lb-sans: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --lb-serif: "EB Garamond", "Cormorant Garamond", "Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --lb-sans: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --lb-mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
 
   /* Thème nuit (défaut) */
   --lb-navy: #0a1030;

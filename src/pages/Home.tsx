@@ -64,9 +64,9 @@ const sections = [
       "https://images.unsplash.com/photo-1568667256549-094345857637?w=1920&q=80",
   },
   {
-    leftLabel: "Fondation Jean-Jaurès · Telos · Terra Nova",
+    leftLabel: "Think tanks · Presse",
     title: "Publications",
-    rightLabel: "Asia Times · Taipei Times · Le Temps",
+    rightLabel: "France · Afrique francophone · Asie du Sud-Est",
     background:
       "https://images.unsplash.com/photo-1495020689067-958852a7765e?w=1920&q=80",
   },
