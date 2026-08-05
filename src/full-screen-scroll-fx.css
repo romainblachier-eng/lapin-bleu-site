@@ -27,6 +27,7 @@
   position: sticky;
   top: 0;
   height: 100vh;
+  height: 100dvh;
   width: 100%;
   overflow: hidden;
   background: var(--fx-page-bg);
@@ -333,6 +334,7 @@
 
 .fx-end {
   height: 100vh;
+  height: 100dvh;
   display: grid;
   place-items: center;
 }
@@ -344,17 +346,25 @@
   font-style: italic;
 }
 
+/* Tablette et mobile */
 @media (max-width: 900px) {
   .fx-content {
+    position: relative;
+    inset: auto;
     grid-template-columns: 1fr;
-    row-gap: 2.5vh;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    row-gap: 1.4vh;
     place-items: center;
+    padding: clamp(6rem, 15vh, 10rem) clamp(1rem, 5vw, 2rem) clamp(5rem, 12vh, 8rem);
+    overflow: hidden;
   }
 
   .fx-left,
   .fx-right,
   .fx-center {
     height: auto;
+    width: 100%;
   }
 
   .fx-left,
@@ -364,16 +374,100 @@
   }
 
   .fx-item {
-    max-width: 36ch;
+    max-width: 100%;
     text-align: center;
+    font-size: clamp(0.68rem, 2.4vw, 0.9rem);
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    hyphens: auto;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .fx-left-item.active,
+  .fx-right-item.active {
+    transform: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .fx-left-item.active::before,
+  .fx-right-item.active::after {
+    display: none;
   }
 
   .fx-track {
     transform: none !important;
   }
 
-  .fx-center::before,
   .fx-center::after {
     display: none;
+  }
+
+  .fx-featured-title {
+    font-size: clamp(1.55rem, 6.6vw, 2.6rem);
+    max-width: 20ch;
+  }
+
+  .fx-featured::before {
+    font-size: 0.68rem;
+    letter-spacing: 0.34em;
+    margin-bottom: 0.9rem;
+  }
+
+  .fx-header {
+    font-size: clamp(1.3rem, 5.4vw, 2.2rem);
+    padding-top: 2.5vh;
+    padding-bottom: 1rem;
+  }
+
+  .fx-header::after {
+    width: 40px;
+  }
+
+  .fx-footer {
+    padding-bottom: calc(2.5vh + env(safe-area-inset-bottom, 0px));
+  }
+
+  .fx-progress {
+    width: 160px;
+  }
+}
+
+/* Petit mobile (iPhone SE, portrait) */
+@media (max-width: 480px) {
+  .fx-content {
+    padding: clamp(5rem, 13vh, 8rem) 1rem clamp(4.5rem, 12vh, 7rem);
+    row-gap: 1vh;
+  }
+
+  .fx-featured-title {
+    font-size: clamp(1.4rem, 7.4vw, 2.1rem);
+  }
+
+  .fx-item {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+  }
+
+  .fx-header {
+    font-size: clamp(1.15rem, 5.6vw, 1.7rem);
+  }
+}
+
+/* Paysage court : évite que le contenu déborde */
+@media (max-height: 600px) and (orientation: landscape) {
+  .fx-content {
+    padding: 4rem 3rem 3rem;
+  }
+
+  .fx-featured-title {
+    font-size: clamp(1.4rem, 3.4vw, 2.4rem);
+  }
+
+  .fx-header {
+    font-size: clamp(1.1rem, 3vw, 2rem);
+    padding-top: 1.5vh;
+    padding-bottom: 0.7rem;
   }
 }
