@@ -45,8 +45,8 @@ export default function SeoGeo() {
       sections={sections}
       header={
         <>
-          <div>SEO</div>
-          <div style={{ color: "#6c5ce7" }}>& GEO</div>
+          <span>SEO</span>
+          <span style={{ color: "var(--lb-accent)" }}> & GEO</span>
         </>
       }
       footer={
@@ -56,16 +56,21 @@ export default function SeoGeo() {
             gap: "1.5rem",
             alignItems: "center",
             flexWrap: "wrap",
+            justifyContent: "center",
           }}
         >
           <a
             href="mailto:contact@lapinbleu.art"
             style={{
-              color: "rgba(245,245,245,0.92)",
+              color: "var(--lb-ink)",
               textDecoration: "none",
-              fontSize: "clamp(1rem, 2vw, 1.5rem)",
-              fontWeight: 600,
-              letterSpacing: "0.05em",
+              fontSize: "clamp(0.85rem, 1.4vw, 1.05rem)",
+              fontFamily: "var(--lb-sans)",
+              fontWeight: 500,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              borderBottom: "1px solid var(--lb-accent-soft)",
+              paddingBottom: "4px",
             }}
           >
             contact@lapinbleu.art
@@ -73,13 +78,15 @@ export default function SeoGeo() {
           <Link
             to="/"
             style={{
-              color: "rgba(245,245,245,0.6)",
+              color: "var(--lb-ink-soft)",
               textDecoration: "none",
-              fontSize: "clamp(0.8rem, 1.4vw, 1rem)",
+              fontSize: "clamp(0.75rem, 1.1vw, 0.9rem)",
+              fontFamily: "var(--lb-sans)",
               fontWeight: 500,
-              letterSpacing: "0.05em",
-              borderLeft: "1px solid rgba(245,245,245,0.3)",
-              paddingLeft: "1.5rem",
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              paddingLeft: "1.2rem",
+              borderLeft: "1px solid var(--lb-accent-soft)",
             }}
           >
             ← Lapin Bleu
@@ -89,10 +96,10 @@ export default function SeoGeo() {
       showProgress
       durations={{ change: 0.7, snap: 800 }}
       colors={{
-        text: "rgba(245,245,245,0.92)",
-        overlay: "rgba(10,10,46,0.55)",
-        pageBg: "#0a0a2e",
-        stageBg: "#0a0a2e",
+        text: "var(--lb-ink)",
+        overlay: "rgba(5, 8, 23, 0.55)",
+        pageBg: "var(--lb-navy-deep)",
+        stageBg: "var(--lb-navy-deep)",
       }}
     />
   );

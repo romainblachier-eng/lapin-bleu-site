@@ -60,7 +60,10 @@
   width: 100%;
   height: 120%;
   object-fit: cover;
-  filter: brightness(0.55) contrast(1.05) saturate(0.9);
+  filter:
+    brightness(var(--lb-photo-brightness))
+    contrast(var(--lb-photo-contrast))
+    saturate(var(--lb-photo-saturate));
   opacity: 0;
   will-change: transform, opacity;
 }
@@ -69,8 +72,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(120% 90% at 50% 40%, rgba(10, 16, 48, 0.32) 0%, rgba(5, 8, 23, 0.85) 75%, rgba(5, 8, 23, 0.95) 100%),
-    linear-gradient(180deg, rgba(5, 8, 23, 0.55) 0%, rgba(5, 8, 23, 0.1) 25%, rgba(5, 8, 23, 0.6) 75%, rgba(5, 8, 23, 0.95) 100%);
+    radial-gradient(120% 90% at 50% 40%, var(--lb-overlay-radial) 0%, var(--lb-overlay-radial-end) 75%, var(--lb-overlay-radial-end) 100%),
+    linear-gradient(180deg, var(--lb-overlay-lin-top) 0%, var(--lb-overlay-lin-mid) 25%, var(--lb-overlay-lin-fade) 75%, var(--lb-overlay-lin-bot) 100%);
 }
 
 .fx-bg-overlay::after {
@@ -78,8 +81,8 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.18;
-  mix-blend-mode: overlay;
+  opacity: var(--lb-grain-opacity);
+  mix-blend-mode: var(--lb-grain-blend);
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.96 0 0 0 0 0.94 0 0 0 0 0.89 0 0 0 0.55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   background-size: 140px 140px;
 }
