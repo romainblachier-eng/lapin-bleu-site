@@ -60,7 +60,7 @@ export default function SeoGeo() {
           }}
         >
           <a
-            href="mailto:contact@lapinbleu.art"
+            href="mailto:romain.blachier@lapinbleu.art"
             style={{
               color: "var(--lb-ink)",
               textDecoration: "none",
@@ -73,7 +73,7 @@ export default function SeoGeo() {
               paddingBottom: "4px",
             }}
           >
-            contact@lapinbleu.art
+            romain.blachier@lapinbleu.art
           </a>
           <Link
             to="/"

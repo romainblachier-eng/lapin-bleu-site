@@ -327,7 +327,7 @@
   justify-content: space-between;
   font-size: 0.7rem;
   color: var(--lb-ink-mute);
-  font-family: var(--lb-sans);
+  font-family: var(--lb-mono);
   letter-spacing: 0.24em;
   padding-bottom: 6px;
 }
@@ -346,18 +346,17 @@
   font-style: italic;
 }
 
-/* Tablette et mobile */
+/* Tablette et mobile : une seule section visible à la fois, en pile centrée
+   (label gauche · titre · label droit). Les colonnes n'affichent plus que
+   leur item actif — le reste est masqué pour éviter l'empilement. */
 @media (max-width: 900px) {
   .fx-content {
-    position: relative;
-    inset: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    height: 100%;
-    row-gap: 1.4vh;
-    place-items: center;
-    padding: clamp(6rem, 15vh, 10rem) clamp(1rem, 5vw, 2rem) clamp(5rem, 12vh, 8rem);
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.9rem, 2.6vh, 1.6rem);
+    padding: clamp(5rem, 13vh, 8rem) 1.25rem clamp(4.5rem, 11vh, 7rem);
   }
 
   .fx-left,
@@ -365,60 +364,78 @@
   .fx-center {
     height: auto;
     width: 100%;
-  }
-
-  .fx-left,
-  .fx-right {
-    justify-items: center;
-    text-align: center;
-  }
-
-  .fx-item {
-    max-width: 100%;
-    text-align: center;
-    font-size: clamp(0.68rem, 2.4vw, 0.9rem);
-    letter-spacing: 0.12em;
-    line-height: 1.4;
-    hyphens: auto;
-    word-break: normal;
-    overflow-wrap: anywhere;
-  }
-
-  .fx-left-item.active,
-  .fx-right-item.active {
-    transform: none;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .fx-left-item.active::before,
-  .fx-right-item.active::after {
-    display: none;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
   }
 
   .fx-track {
     transform: none !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* On ne montre que l'item actif de chaque colonne */
+  .fx-item {
+    display: none;
+  }
+
+  .fx-item.active {
+    display: block;
+    opacity: 1;
+    color: var(--lb-ink);
+    transform: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    text-align: center;
+    font-size: clamp(0.7rem, 2.5vw, 0.88rem);
+    letter-spacing: 0.12em;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .fx-item.active::before,
+  .fx-item.active::after {
+    display: none;
+  }
+
+  /* Centre : seul le titre actif est en flux (les autres masqués) */
+  .fx-center {
+    position: static;
   }
 
   .fx-center::after {
     display: none;
   }
 
+  .fx-featured {
+    position: static;
+    display: none;
+    padding: 0;
+  }
+
+  .fx-featured.active {
+    display: block;
+  }
+
   .fx-featured-title {
-    font-size: clamp(1.55rem, 6.6vw, 2.6rem);
-    max-width: 20ch;
+    font-size: clamp(1.7rem, 7vw, 2.7rem);
+    max-width: 16ch;
+    margin: 0 auto;
   }
 
   .fx-featured::before {
     font-size: 0.68rem;
-    letter-spacing: 0.34em;
-    margin-bottom: 0.9rem;
+    letter-spacing: 0.32em;
+    margin-bottom: 0.7rem;
   }
 
   .fx-header {
     font-size: clamp(1.3rem, 5.4vw, 2.2rem);
     padding-top: 2.5vh;
-    padding-bottom: 1rem;
+    padding-bottom: 0.9rem;
   }
 
   .fx-header::after {
@@ -426,7 +443,7 @@
   }
 
   .fx-footer {
-    padding-bottom: calc(2.5vh + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(3vh + env(safe-area-inset-bottom, 0px));
   }
 
   .fx-progress {
@@ -436,17 +453,12 @@
 
 /* Petit mobile (iPhone SE, portrait) */
 @media (max-width: 480px) {
-  .fx-content {
-    padding: clamp(5rem, 13vh, 8rem) 1rem clamp(4.5rem, 12vh, 7rem);
-    row-gap: 1vh;
-  }
-
   .fx-featured-title {
-    font-size: clamp(1.4rem, 7.4vw, 2.1rem);
+    font-size: clamp(1.5rem, 8vw, 2.2rem);
   }
 
-  .fx-item {
-    font-size: 0.72rem;
+  .fx-item.active {
+    font-size: 0.74rem;
     letter-spacing: 0.1em;
   }
 
@@ -458,7 +470,8 @@
 /* Paysage court : évite que le contenu déborde */
 @media (max-height: 600px) and (orientation: landscape) {
   .fx-content {
-    padding: 4rem 3rem 3rem;
+    gap: 0.7rem;
+    padding: 3.5rem 3rem 3rem;
   }
 
   .fx-featured-title {

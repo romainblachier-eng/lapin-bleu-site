@@ -98,7 +98,7 @@ export default function Home() {
       }
       footer={
         <a
-          href="mailto:contact@lapinbleu.art"
+          href="mailto:romain.blachier@lapinbleu.art"
           style={{
             color: "var(--lb-ink)",
             textDecoration: "none",
@@ -111,7 +111,7 @@ export default function Home() {
             paddingBottom: "4px",
           }}
         >
-          contact@lapinbleu.art
+          romain.blachier@lapinbleu.art
         </a>
       }
       showProgress
