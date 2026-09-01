@@ -187,8 +187,8 @@ function Arrow() {
 
 function HomePage() {
   usePageMetadata(
-    "Lapin Bleu | Conseil en politiques publiques, gouvernance et transitions",
-    "Lapin Bleu accompagne les institutions, opérateurs, collectivités et cabinets en politiques publiques, gouvernance et transitions, avec une expertise forte dans l’énergie.",
+    "Lapin Bleu | Conseil en politiques publiques, gouvernance et transitions énergétiques",
+    "Lapin Bleu accompagne les institutions, opérateurs, collectivités et cabinets en politiques publiques, gouvernance et transitions énergétiques.",
   );
 
   return (
@@ -198,7 +198,7 @@ function HomePage() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow">Cabinet de conseil · Politiques publiques · Gouvernance</p>
-            <h1 id="hero-title">Conseil en politiques publiques, gouvernance et transitions.</h1>
+            <h1 id="hero-title">Conseil en politiques publiques, gouvernance et transitions énergétiques.</h1>
             <p className="hero-lede">
               Lapin Bleu accompagne les institutions, opérateurs, collectivités,
               cabinets et consortiums dans l’analyse et la mise en œuvre de leurs
@@ -219,7 +219,7 @@ function HomePage() {
             <p className="brief-kicker">Domaines de conseil</p>
             <ul className="brief-services">
               <li>Politiques publiques et gouvernance</li>
-              <li>Énergie, infrastructures et transitions</li>
+              <li>Énergie, infrastructures et transitions énergétiques</li>
               <li>Concertation et acceptabilité</li>
               <li>Renforcement de capacités</li>
             </ul>
