@@ -74,7 +74,6 @@ summary:focus-visible {
 .section,
 .hero,
 .site-footer,
-.geo-hero,
 .final-cta {
   width: min(100%, calc(var(--max) + 2 * var(--gutter)));
   margin-inline: auto;
@@ -88,10 +87,6 @@ summary:focus-visible {
   align-items: center;
   gap: 2rem;
   border-bottom: 1px solid var(--line);
-}
-
-.site-header-compact {
-  grid-template-columns: 1fr auto;
 }
 
 .brand {
@@ -202,9 +197,7 @@ summary:focus-visible {
 .case-intro h2,
 .credentials-section h2,
 .faq-section h2,
-.final-cta h2,
-.geo-hero h1,
-.geo-price h2 {
+.final-cta h2 {
   margin: 0;
   font-family: var(--sans);
   font-weight: 500;
@@ -299,8 +292,7 @@ summary:focus-visible {
 .section-heading h2,
 .case-intro h2,
 .credentials-section h2,
-.faq-section h2,
-.geo-price h2 { font-size: clamp(2.25rem, 4vw, 3.6rem); }
+.faq-section h2 { font-size: clamp(2.25rem, 4vw, 3.6rem); }
 
 .section-heading > p:last-child,
 .case-intro > p:last-child,
@@ -340,8 +332,7 @@ summary:focus-visible {
 .offer-card h3,
 .audience-grid h3,
 .process-list h3,
-.publication-card h3,
-.geo-grid h3 {
+.publication-card h3 {
   margin: 0;
   font-family: var(--sans);
   font-size: clamp(1.45rem, 2.3vw, 1.9rem);
@@ -387,10 +378,9 @@ summary:focus-visible {
 .audience-grid article:first-child { padding-left: 0; }
 .audience-grid article:last-child { border-right: 0; }
 
-.audience-grid article > span,
-.geo-grid article > span { color: var(--accent-ink); font: 400 0.65rem/1.4 var(--mono); }
+.audience-grid article > span { color: var(--accent-ink); font: 400 0.65rem/1.4 var(--mono); }
 .audience-grid h3 { margin-top: 2.5rem; font-size: 1.35rem; }
-.audience-grid p, .geo-grid p { margin: 1rem 0 0; color: var(--ink-soft); font-size: 0.84rem; }
+.audience-grid p { margin: 1rem 0 0; color: var(--ink-soft); font-size: 0.84rem; }
 
 .case-section {
   display: grid;
@@ -564,8 +554,7 @@ summary:focus-visible {
 .methods-line span { padding: 0.55rem 0.8rem; border: 1px solid var(--line); color: var(--ink-soft); font-size: 0.7rem; }
 
 .credentials-section,
-.faq-section,
-.geo-price {
+.faq-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(3rem, 9vw, 9rem);
@@ -634,35 +623,6 @@ summary:focus-visible {
 .footer-links { gap: 1.5rem; }
 .legal { grid-column: 1 / -1; margin: 1.5rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--ink-mute); font-size: 0.68rem; }
 
-.geo-hero {
-  min-height: calc(100vh - 89px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.geo-hero h1 { max-width: 18ch; font-size: clamp(3rem, 5.5vw, 5.25rem); }
-.geo-hero > p:not(.eyebrow) { max-width: 720px; margin: 2rem 0 0; color: var(--ink-soft); font-family: var(--sans); font-size: clamp(1.08rem, 1.6vw, 1.3rem); }
-
-.geo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--line-strong);
-  border-left: 1px solid var(--line-strong);
-}
-
-.geo-grid article {
-  min-height: 320px;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  border-right: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
-}
-
-.geo-grid h3 { margin-top: 4rem; }
-.geo-price > div:last-child > p { margin: 0 0 2rem; color: var(--ink-soft); }
-
 @media (max-width: 1040px) {
   .site-header { grid-template-columns: 1fr auto; }
   .primary-nav { display: none; }
@@ -670,7 +630,7 @@ summary:focus-visible {
   .hero-brief { max-width: 560px; margin-top: 4rem; }
   .audience-grid { grid-template-columns: repeat(2, 1fr); }
   .audience-grid article:first-child, .audience-grid article:nth-child(3) { padding-left: 0; }
-  .case-section, .credentials-section, .faq-section, .intervention-callout, .geo-price { grid-template-columns: 1fr; }
+  .case-section, .credentials-section, .faq-section, .intervention-callout { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 760px) {
@@ -680,8 +640,8 @@ summary:focus-visible {
   .button-small { display: none; }
   .theme-toggle { min-width: 4rem; padding: 0.6rem 0.7rem; }
   .hero { padding-top: 4.5rem; }
-  .hero-copy h1, .geo-hero h1 { font-size: clamp(2.55rem, 11vw, 3.7rem); }
-  .proof-strip, .offer-grid, .audience-grid, .publication-grid, .geo-grid { grid-template-columns: 1fr; }
+  .hero-copy h1 { font-size: clamp(2.55rem, 11vw, 3.7rem); }
+  .proof-strip, .offer-grid, .audience-grid, .publication-grid { grid-template-columns: 1fr; }
   .proof-strip > div, .proof-strip > div:first-child { padding: 1.25rem 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .proof-strip > div:last-child { border-bottom: 0; }
   .offer-card { min-height: auto; }
@@ -698,7 +658,6 @@ summary:focus-visible {
   .site-footer { grid-template-columns: 1fr; }
   .footer-links { align-items: flex-start; flex-direction: column; gap: 0.65rem; }
   .legal { grid-column: auto; }
-  .geo-hero { min-height: calc(100vh - 73px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

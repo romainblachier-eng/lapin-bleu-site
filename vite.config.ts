@@ -9,7 +9,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
-        seoGeo: resolve(import.meta.dirname, 'seo-geo.html'),
       },
     },
   },

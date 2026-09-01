@@ -156,21 +156,19 @@ function ThemeToggle() {
   );
 }
 
-function SiteHeader({ compact = false }: { compact?: boolean }) {
+function SiteHeader() {
   return (
-    <header className={`site-header${compact ? " site-header-compact" : ""}`}>
+    <header className="site-header">
       <a className="brand" href="/" aria-label="Lapin Bleu — accueil">
         <span>Lapin</span> <em>Bleu</em>
       </a>
-      {!compact && (
-        <nav className="primary-nav" aria-label="Navigation principale">
-          <a href="#offre">L’offre</a>
-          <a href="#publics">Pour qui</a>
-          <a href="#methode">Méthode</a>
-          <a href="#references">Références</a>
-          <a href="#travaux">Publications</a>
-        </nav>
-      )}
+      <nav className="primary-nav" aria-label="Navigation principale">
+        <a href="#offre">L’offre</a>
+        <a href="#publics">Pour qui</a>
+        <a href="#methode">Méthode</a>
+        <a href="#references">Références</a>
+        <a href="#travaux">Publications</a>
+      </nav>
       <div className="header-actions">
         <ThemeToggle />
         <a className="button button-small" href={contactHref}>
@@ -444,7 +442,6 @@ function HomePage() {
           <p>Conseil · études · formation en politiques publiques, gouvernance et énergie</p>
         </div>
         <div className="footer-links">
-          <a href="/seo-geo">Offre SEO & GEO</a>
           <a href="https://romainblachier.fr">Romain Blachier</a>
           <a href={contactHref}>Contact</a>
         </div>
@@ -454,72 +451,6 @@ function HomePage() {
   );
 }
 
-const geoOffers = [
-  {
-    title: "Diagnostic de visibilité",
-    text: "Audit du site, des contenus, des signaux d’autorité et de la présence de la marque dans les moteurs et les réponses d’IA.",
-  },
-  {
-    title: "Plan d’action éditorial",
-    text: "Priorisation des pages, questions et preuves à publier pour devenir une source claire, crédible et facilement interprétable.",
-  },
-  {
-    title: "Optimisation continue",
-    text: "Amélioration technique et éditoriale, suivi des résultats et ajustements mensuels selon les requêtes réellement utiles.",
-  },
-];
-
-function SeoGeoPage() {
-  usePageMetadata(
-    "SEO & GEO | Visibilité dans Google et les réponses des IA — Lapin Bleu",
-    "Une offre claire pour améliorer la visibilité de votre organisation dans Google, ChatGPT, Claude, Gemini et Perplexity : audit, plan d’action et optimisation continue.",
-    "/seo-geo",
-  );
-
-  return (
-    <div className="site-shell geo-page">
-      <SiteHeader compact />
-      <main>
-        <section className="geo-hero">
-          <p className="eyebrow">Offre dédiée · SEO & GEO</p>
-          <h1>Être trouvé dans Google.<br />Être cité dans les réponses des IA.</h1>
-          <p>
-            Une approche commune du référencement naturel et du Generative Engine
-            Optimization pour rendre votre expertise compréhensible, vérifiable et
-            visible là où vos publics cherchent désormais leurs réponses.
-          </p>
-          <div className="hero-actions">
-            <a className="button" href="mailto:romain.blachier@lapinbleu.art?subject=Audit%20SEO%20et%20GEO">Demander l’audit initial <Arrow /></a>
-            <a className="text-link" href="#geo-offre">Voir le déroulé <span aria-hidden="true">↓</span></a>
-          </div>
-        </section>
-
-        <section className="section geo-offer" id="geo-offre">
-          <div className="section-heading"><p className="eyebrow">Le déroulé</p><h2>Trois étapes, sans jargon inutile.</h2></div>
-          <div className="geo-grid">
-            {geoOffers.map((offer, index) => (
-              <article key={offer.title}><span>0{index + 1}</span><h3>{offer.title}</h3><p>{offer.text}</p></article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section geo-price">
-          <div><p className="eyebrow">Accompagnement</p><h2>À partir de 400 € / mois</h2></div>
-          <div>
-            <p>Le périmètre dépend du volume de pages, du niveau de concurrence et des contenus à produire. L’échange initial sert à vérifier l’utilité de la démarche avant toute proposition.</p>
-            <a className="button" href="mailto:romain.blachier@lapinbleu.art?subject=Audit%20SEO%20et%20GEO">Échanger sur votre site <Arrow /></a>
-          </div>
-        </section>
-      </main>
-      <footer className="site-footer">
-        <a className="brand brand-small" href="/"><span>Lapin</span> <em>Bleu</em></a>
-        <div className="footer-links"><a href="/">Offre principale</a><a href={contactHref}>Contact</a></div>
-      </footer>
-    </div>
-  );
-}
-
 export default function App() {
-  const path = window.location.pathname.replace(/\/+$/, "") || "/";
-  return path === "/seo-geo" ? <SeoGeoPage /> : <HomePage />;
+  return <HomePage />;
 }
