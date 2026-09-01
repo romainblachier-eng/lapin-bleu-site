@@ -86,6 +86,27 @@ const process = [
   },
 ];
 
+const publications = [
+  {
+    type: "Policy paper",
+    context: "Gabon · Politique énergétique · 8 pages",
+    title: "Rétablir un service électrique fiable au Gabon",
+    description:
+      "Deux mesures opérationnelles et chiffrées pour améliorer la fiabilité du service : régulariser les branchements et sortir progressivement de la location thermique flottante.",
+    topics: ["Électricité", "Gouvernance", "Afrique centrale"],
+    href: "/publications/policy-paper-electricite-gabon.pdf",
+  },
+  {
+    type: "Note de politique publique",
+    context: "France · Gouvernance territoriale · 9 pages",
+    title: "Data centers : négocier avant le permis",
+    description:
+      "Un guide pratique pour aider les intercommunalités à négocier l’énergie, l’eau, la fiscalité, l’emploi et les contreparties territoriales avant d’autoriser un projet.",
+    topics: ["Collectivités", "Infrastructures numériques", "Énergie"],
+    href: "/publications/note-data-centers-intercommunalites.pdf",
+  },
+];
+
 function setMeta(name: string, content: string, property = false) {
   const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
   let element = document.querySelector<HTMLMetaElement>(selector);
@@ -146,7 +167,8 @@ function SiteHeader({ compact = false }: { compact?: boolean }) {
           <a href="#offre">L’offre</a>
           <a href="#publics">Pour qui</a>
           <a href="#methode">Méthode</a>
-          <a href="#references">Expérience</a>
+          <a href="#references">Références</a>
+          <a href="#travaux">Publications</a>
         </nav>
       )}
       <div className="header-actions">
@@ -280,6 +302,69 @@ function HomePage() {
               <p>Note de vision et d’aide à la décision, catalogue de formation et proposition d’accompagnement technique.</p>
             </article>
           </div>
+        </section>
+
+        <section className="section publications-section" id="travaux" aria-labelledby="publications-title">
+          <div className="section-heading split-heading">
+            <div>
+              <p className="eyebrow">Policy papers · Septembre 2026</p>
+              <h2 id="publications-title">Des analyses conçues pour éclairer l’action.</h2>
+            </div>
+            <p>
+              Chaque publication part d’un problème public précis, confronte les
+              données disponibles et débouche sur des recommandations directement
+              mobilisables par les décideurs.
+            </p>
+          </div>
+          <div className="publication-grid">
+            {publications.map((publication, index) => (
+              <article className="publication-card" key={publication.title}>
+                <div className="publication-meta">
+                  <span>0{index + 1}</span>
+                  <span>{publication.type}</span>
+                </div>
+                <p className="publication-context">{publication.context}</p>
+                <h3>{publication.title}</h3>
+                <p className="publication-description">{publication.description}</p>
+                <ul className="publication-topics" aria-label="Thèmes abordés">
+                  {publication.topics.map((topic) => <li key={topic}>{topic}</li>)}
+                </ul>
+                <div className="publication-footer">
+                  <span>Romain Blachier · PDF</span>
+                  <a
+                    className="text-link"
+                    href={publication.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Lire ${publication.title} au format PDF`}
+                  >
+                    Lire le document <Arrow />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+          <aside className="intervention-callout" aria-labelledby="intervention-title">
+            <div>
+              <p className="eyebrow">Fiche d’intervention · Collectivités</p>
+              <h3 id="intervention-title">Data centers et territoires : décider avant le permis.</h3>
+            </div>
+            <div className="intervention-copy">
+              <p>
+                Formation des élus, atelier pour les cadres territoriaux ou appui
+                à une négociation en cours : trois formats pour sécuriser les
+                décisions sur l’énergie, l’eau, la fiscalité, l’emploi et l’urbanisme.
+              </p>
+              <a
+                className="button"
+                href="/publications/fiche-intervention-data-centers.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Voir la fiche d’intervention <Arrow />
+              </a>
+            </div>
+          </aside>
         </section>
 
         <section className="section process-section" id="methode" aria-labelledby="process-title">
