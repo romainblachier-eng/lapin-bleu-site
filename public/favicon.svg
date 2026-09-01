@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lapin Bleu">
   <rect width="64" height="64" rx="12" fill="#071027"/>
   <path d="M13 14v36h17" fill="none" stroke="#f4efe3" stroke-width="7" stroke-linecap="square"/>
-  <path d="M36 14h8c7 0 11 3 11 9 0 4-2 7-6 8 5 1 8 4 8 9 0 7-5 10-13 10h-8V14Z" fill="none" stroke="#d3a24d" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M36 14h8c7 0 11 3 11 9 0 4-2 7-6 8 5 1 8 4 8 9 0 7-5 10-13 10h-8V14Z" fill="none" stroke="#7db7df" stroke-width="6" stroke-linejoin="round"/>
 </svg>
