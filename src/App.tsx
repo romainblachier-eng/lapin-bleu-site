@@ -236,6 +236,14 @@ function HomePage() {
           </div>
         </section>
 
+        <section className="final-cta" aria-labelledby="cta-title">
+          <p className="eyebrow">Échanger sur une mission</p>
+          <h2 id="cta-title">Vous recherchez un appui en politiques publiques, gouvernance ou énergie ?</h2>
+          <p>Présentez en quelques lignes le contexte, l’échéance et le livrable attendu. Nous vous répondrons sur la meilleure façon d’intervenir.</p>
+          <a className="button button-light" href={contactHref}>Écrire à Lapin Bleu <Arrow /></a>
+          <a className="email-link" href={contactHref}>romain.blachier@lapinbleu.art</a>
+        </section>
+
         <section className="section offer-section" id="offre" aria-labelledby="offer-title">
           <div className="section-heading">
             <p className="eyebrow">Offre de consulting</p>
@@ -256,14 +264,6 @@ function HomePage() {
               </article>
             ))}
           </div>
-        </section>
-
-        <section className="final-cta" aria-labelledby="cta-title">
-          <p className="eyebrow">Échanger sur une mission</p>
-          <h2 id="cta-title">Vous recherchez un appui en politiques publiques, gouvernance ou énergie ?</h2>
-          <p>Présentez en quelques lignes le contexte, l’échéance et le livrable attendu. Nous vous répondrons sur la meilleure façon d’intervenir.</p>
-          <a className="button button-light" href={contactHref}>Écrire à Lapin Bleu <Arrow /></a>
-          <a className="email-link" href={contactHref}>romain.blachier@lapinbleu.art</a>
         </section>
 
         <section className="section audience-section" id="publics" aria-labelledby="audience-title">
