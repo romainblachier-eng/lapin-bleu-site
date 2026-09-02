@@ -203,10 +203,10 @@ function HomePage() {
               politiques publiques. Une expertise particulière dans l’énergie et
               le secteur électrique.
             </p>
+            {/* Plus de bouton de contact ici : le bandeau « Échanger sur une
+                mission » le suit immédiatement, deux invitations coup sur coup
+                donnaient l'impression d'insister. */}
             <div className="hero-actions">
-              <a className="button" href={contactHref}>
-                Parler d’une mission <Arrow />
-              </a>
               <a className="text-link" href="#offre">
                 Découvrir l’offre <span aria-hidden="true">↓</span>
               </a>
