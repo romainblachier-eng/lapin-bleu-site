@@ -606,6 +606,15 @@ summary:focus-visible {
 .final-cta h2 { max-width: 18ch; margin-inline: auto; font-size: clamp(2.4rem, 4.5vw, 4.2rem); }
 .final-cta > p:not(.eyebrow) { max-width: 610px; margin: 1.6rem auto 2rem; opacity: 0.78; }
 .final-cta .button-light { background: #fff; border-color: #fff; color: var(--cta); }
+.closing-cta {
+  width: min(100%, calc(var(--max) + 2 * var(--gutter)));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  margin-top: var(--section);
+  margin-bottom: var(--section);
+  text-align: center;
+}
+
 .email-link { display: block; width: max-content; max-width: 100%; margin: 1.6rem auto 0; font-size: 0.78rem; text-underline-offset: 4px; }
 
 .site-footer {
